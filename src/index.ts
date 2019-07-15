@@ -23,6 +23,8 @@ const delay = (ms: number) => {
 }
 
 const readFromHttp = async (url: string, onPageReady: (page: Page) => Promise<void>) => {
+  console.log('Url:', url);
+
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -31,6 +33,8 @@ const readFromHttp = async (url: string, onPageReady: (page: Page) => Promise<vo
   await onPageReady(page);
 
   await browser.close();
+
+  console.log('  - done');
 }
 
 
@@ -46,37 +50,76 @@ const readFromLocal = async (path: string, onPageReady: (page: Page) => Promise<
 }
 
 const appendToFile = async (path: string, content: string) => {
-  fs.writeFile(path, content, (err) => {
-    if (err) {
-      console.log(err);
+  return new Promise((resolve, reject) => {
+    fs.appendFile(path, content, (err) => {
+      if (err) {
+        reject(err);
+        return;
+      }
 
-      throw err;
-    }
-  });
+      resolve();
+    });
+  })
 }
 
 
-const onPageReady = async (page: Page) => {
-  await page.waitForSelector('.post-view-meta-rating');
+async function getPageBody(page: Page, { selector, timeout = 5 * 1000 }: {
+  selector: string;
+  timeout?: number,
+}) {
+  try {
+    await page.waitForSelector(selector, { timeout });
+  } catch (e) {
+    if (e.name === 'TimeoutError') {
+      throw new Error('Done');
+    }
 
-  await page.screenshot({ path: 'example.png' });
+    throw (e);
+  }
 
-  const body = await page.evaluate(() => {
-    const b = document.querySelector('body');
+  return await page.evaluate(() => {
+    const body = document.querySelector('body');
 
-    return b ? b.innerHTML : '';
+    return body ? body.innerHTML : '';
   });
+}
+
+const onPageReady = async (page: Page) => {
+  const body = await getPageBody(page, { selector: '.post-view-meta-rating' });
 
   const games = parseArchivedGames(body);
 
-  appendToFile('./archived_games.json', games.map((g) => JSON.stringify(g)).join('\n'));
-
-  // console.log();
-
-  return;
+  await appendToFile('./data/archived_games.json', games.map((g) => JSON.stringify(g)).join('\n'));
 }
 
 
+const withPagination = (getUrl: (page: number) => string, onEachPageReady: (page: Page) => Promise<void>, currentPage = 1) => {
+  (async function go(currentPage) {
+    const url = getUrl(currentPage);
 
-// readFromHttp('https://www.chess.com/games/archive/gctroia?gameOwner=other_game&gameTypes%5B0%5D=chess960&gameTypes%5B1%5D=daily&gameType=live&page=1', onPageReady);
-readFromLocal('./scrappings/my_games.html', onPageReady);
+    try {
+      await readFromHttp(url, onEachPageReady);
+
+      console.log('Wait 5s');
+      await delay(5 * 1000);
+
+      go(currentPage + 1);
+    } catch (e) {
+      if (e.name === 'Done') {
+        console.log('Finished');
+
+        return;
+      }
+
+      throw e;
+    }
+
+  })(currentPage)
+}
+
+
+// readFromHttp('https://www.chess.com/games/archive/gctroia?gameOwner=other_game&gameTypes%5B0%5D=chess960&gameTypes%5B1%5D=daily&gameType=live&page=2', onPageReady);
+
+withPagination((i) => `https://www.chess.com/games/archive/gctroia?gameOwner=other_game&gameTypes%5B0%5D=chess960&gameTypes%5B1%5D=daily&gameType=daily&page=${i}`, onPageReady);
+
+// readFromLocal('./scrappings/my_games.html', onPageReady);
