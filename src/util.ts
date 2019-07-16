@@ -93,10 +93,10 @@ export async function* asyncIterate<T, R>(arr: T[], cb: (val: T) => Promise<R | 
   }
 }
 
-export const forEachAsync = curry(async <T, R>(cb: (r: T) => R, arr: T[] | Iterable<T>) => {
+export const forEachAsync = async <T, R>(cb: (r: T) => R, arr: T[] | Iterable<T>) => {
   const iterator = (isArray(arr)) ? arr[Symbol.iterator]() : arr;
 
   for await (let item of iterator) {
     await cb(item);
   }
-});
+};
