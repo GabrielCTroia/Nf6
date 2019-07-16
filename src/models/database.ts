@@ -28,6 +28,7 @@ const createOrUpdate = <R>(db: JsonDB, path: string, record: R) => {
 
     db.push(path, {
       ...record,
+      __createdAt,
 
       // Reset the updatedAt only if the hashes are different
       __updatedAt: (prevHash === nextHash) ? __prevUpdatedAt : new Date(),
@@ -41,11 +42,18 @@ const createOrUpdate = <R>(db: JsonDB, path: string, record: R) => {
   }
 }
 
-export const getModel = (name: string, dirPath = './db') => {
-  const db = new JsonDB(new Config(`${dirPath}/${name}`, true, true, '/'));
+export const getModel = <R>({ name, path, keyExtractor }: {
+  name: string;
+  path: string;
+  keyExtractor: (r: R) => string;
+}) => {
+  const db = new JsonDB(new Config(`./db/${name}`, true, true, '/'));
 
   return {
-    read: <R>(path: string): R | null => read(db, path),
-    createOrUpdate: <R>(path: string, record: R) => createOrUpdate(db, path, record),
+    read: (key: string) => read<R>(db, `${path}/${key}`),
+    createOrUpdate: (record: R, key: string = keyExtractor(record)) => createOrUpdate(db, `${path}/${key}`, record),
+    all: () => db.filter<R>(`${path}`, () => true) || [],
+    filter: (cb: (r: R) => boolean) => db.filter<R>(`${path}`, cb) || [],
+    find: (cb: (r: R) => boolean) => db.find<R>(`${path}`, cb),
   }
 }

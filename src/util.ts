@@ -1,6 +1,7 @@
 import fs from 'fs';
 import puppeteer, { Page } from 'puppeteer';
 import LineByLineReader from 'line-by-line';
+import { Path, pathOr } from 'ramda';
 
 export const saveToFile = (path: string, content: string) => {
   return new Promise((resolve, reject) => {
@@ -73,3 +74,5 @@ export const readEachLineAsync = (path: string, cb: (line: any, c: number) => Pr
     lr.resume();
   });
 }
+
+export const getModelValFor = (obj: any) => <T>(path: Path, defaultVal: T): T => pathOr(defaultVal, path, obj);

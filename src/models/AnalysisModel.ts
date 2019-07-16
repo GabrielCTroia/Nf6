@@ -31,6 +31,7 @@ export type AnalysisTallyRecord = {
 }
 
 export type AnalysisRecord = {
+  gameId: string;
   arc: string;
   openingName: string;
   gameDatetime: Date,
@@ -42,7 +43,8 @@ export type AnalysisRecord = {
   }
 }
 
-const model = getModel('analsysis');
-
-export const read = (gameId: string) => model.read<AnalysisRecord>(`/analysis/${gameId}`);
-export const createOrUpdate = (gameId: string, record: AnalysisRecord) => model.createOrUpdate(gameId, record);
+export const model = getModel<AnalysisRecord>({
+  name: 'analsysis',
+  path: '/analsysis',
+  keyExtractor: (r) => r.gameId,
+});
