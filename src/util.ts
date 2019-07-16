@@ -1,7 +1,8 @@
 import fs from 'fs';
 import puppeteer, { Page } from 'puppeteer';
 import LineByLineReader from 'line-by-line';
-import { Path, pathOr } from 'ramda';
+import { curry, Path, pathOr } from 'ramda';
+import { isArray } from 'util';
 
 export const saveToFile = (path: string, content: string) => {
   return new Promise((resolve, reject) => {
@@ -76,3 +77,26 @@ export const readEachLineAsync = (path: string, cb: (line: any, c: number) => Pr
 }
 
 export const getModelValFor = (obj: any) => <T>(path: Path, defaultVal: T): T => pathOr(defaultVal, path, obj);
+
+/**
+ * Iterates over given array async
+ *
+ * @param arr
+ * @param cb
+ */
+export async function* asyncIterate<T, R>(arr: T[], cb: (val: T) => Promise<R | void>) {
+  var i = 0;
+
+  while (i < arr.length) {
+    yield await cb(arr[i]);
+    i++;
+  }
+}
+
+export const forEachAsync = curry(async <T, R>(cb: (r: T) => R, arr: T[] | Iterable<T>) => {
+  const iterator = (isArray(arr)) ? arr[Symbol.iterator]() : arr;
+
+  for await (let item of iterator) {
+    await cb(item);
+  }
+});
