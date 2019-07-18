@@ -42,10 +42,10 @@ const createOrUpdate = <R>(db: JsonDB, path: string, record: R) => {
   }
 }
 
-export const getModel = <R>({ name, path, keyExtractor }: {
+export const getModel = <R>({ name, path = `/${name}`, keyExtractor }: {
   name: string;
-  path: string;
   keyExtractor: (r: R) => string;
+  path?: string;
 }) => {
   const db = new JsonDB(new Config(`./db/${name}`, true, true, '/'));
 
@@ -54,6 +54,28 @@ export const getModel = <R>({ name, path, keyExtractor }: {
     createOrUpdate: (record: R, key: string = keyExtractor(record)) => createOrUpdate(db, `${path}/${key}`, record),
     all: () => db.filter<R>(`${path}`, () => true) || [],
     filter: (cb: (r: R) => boolean) => db.filter<R>(`${path}`, cb) || [],
+    map: <T>(cb: (r: R) => T) => {
+      const res: T[] = [];
+
+      // Hack: Make use of the provided method filer since this is the only iterator given
+      db.filter<R>(`${path}`, (r) => {
+        res.push(cb(r));
+
+        // don't fill an extra array
+        return false;
+      });
+
+      return res;
+    },
+    forEach: (cb: (r: R) => void) => {
+      // Hack: Make use of the provided method filer since this is the only iterator given
+      db.filter<R>(`${path}`, (r) => {
+        cb(r);
+
+        // don't fill an extra array
+        return false;
+      });
+    },
     find: (cb: (r: R) => boolean) => db.find<R>(`${path}`, cb),
   }
 }

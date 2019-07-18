@@ -12,7 +12,7 @@ export const parse = (rawAnalysis: any) => {
     arc: analysisValOr(['arc'], ''),
     openingName: analysisValOr(['book', 'name'], ''),
     gameDatetime: new Date(dataValOr(['create_date'], '')),
-    movesCount: analysisValOr(['totalPositions'], -1),
+    totalPositions: analysisValOr(['totalPositions'], -1),
     white: {
       overallTallies: analysisValOr(['tallies', 'white'], {}) as AnalysisTallyRecord,
     },

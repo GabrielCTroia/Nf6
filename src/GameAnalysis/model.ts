@@ -1,4 +1,4 @@
-import { getModel } from "./database";
+import { getModel } from "../lib/Model";
 
 export type AnalysisTallyRecord = {
   excellent: number;
@@ -13,7 +13,7 @@ export type AnalysisTallyRecord = {
   winningToLosing: number;
   missedWin: number;
   critical: number;
-  brilliant: 0,
+  brilliant: number;
 
   // Others
   blunderGP0: number;
@@ -34,7 +34,10 @@ export type AnalysisRecord = {
   gameId: string;
   arc: string;
   openingName: string;
-  gameDatetime: Date,
+
+  // TODO: I believe this is Played Time not Analysis but need to check for sure!
+  playedDatetime: Date,
+  // movesCount: number;
   white: {
     overallTallies: AnalysisTallyRecord,
   },
@@ -42,9 +45,8 @@ export type AnalysisRecord = {
     overallTallies: AnalysisTallyRecord,
   }
 }
-
+ 
 export const model = getModel<AnalysisRecord>({
-  name: 'analsysis',
-  path: '/analsysis',
+  name: 'gameAnalsysis',
   keyExtractor: (r) => r.gameId,
 });
