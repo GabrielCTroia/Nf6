@@ -1,2 +1,2 @@
 export * from './model';
-export { scrape as startScrapingStream } from './scraper';
+export { scrape as scrapeGames } from './scraper';
