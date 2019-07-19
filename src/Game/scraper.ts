@@ -1,7 +1,6 @@
 import { parse } from './parser';
-import { fetchHTML, FetchHTMLExceptions, fetchAsStream, delay } from '../lib/util';
-import mergeStream from 'merge-stream';
-import through2 = require('through2');
+import { fetchHTML, FetchHTMLExceptions, fetchAsStream, delay, getRandom } from '../lib/util';
+import multistream = require('multistream');
 
 enum GameTypes {
   live = 'live',
@@ -14,7 +13,7 @@ type Paginator = {
   next: () => string;
 }
 
-const getPaginator = (username:string, type: GameTypes, page = 0): Paginator => {
+const getPaginator = (username: string, type: GameTypes, page = 0): Paginator => {
   return {
     page,
     current() {
@@ -28,30 +27,38 @@ const getPaginator = (username:string, type: GameTypes, page = 0): Paginator => 
   }
 }
 
-
 const fetch = async (paginator: Paginator) => {
-  return fetchHTML(paginator.next(), { waitForSelector: '.post-view-meta-rating' })
-    .then(parse)
-    .catch((e) => {
-      if (e === FetchHTMLExceptions.LookupSelectorNotFound) {
-        return null;
-      }
+  const nextUrl = paginator.next();
 
-      throw e;
-    });
+  const waitSeconds = getRandom(15, 5);
+
+  console.log('Fetching', nextUrl);
+
+  try {
+    const html = await fetchHTML(nextUrl, { waitForSelector: '.post-view-meta-rating' });
+
+    console.log(' Done.');
+    console.log(` Friendly wait for ${waitSeconds} seconds!`);
+
+    // Don't abuse the server!
+    await delay(waitSeconds * 1000);
+
+    return parse(html);
+  } catch (e) {
+    if (e === FetchHTMLExceptions.LookupSelectorNotFound) {
+      return null;
+    }
+
+    throw e;
+  }
 }
 
 export const scrape = (username: string) => {
-  return mergeStream(
-    fetchAsStream(() => fetch(getPaginator(username, GameTypes.daily))),
-    fetchAsStream(() => fetch(getPaginator(username, GameTypes.live))),
-  )
-  .pipe(through2.obj(async function (chunk, _, next) {
-    this.push(chunk);
+  const livePaginator = getPaginator(username, GameTypes.live, 43);
+  const dailyPaginator = getPaginator(username, GameTypes.daily);
 
-    console.log('Wait 5s');
-    await delay(5 * 1000);
-
-    next();
-  }));
+  return multistream.obj([
+    fetchAsStream(() => fetch(dailyPaginator)),
+    fetchAsStream(() => fetch(livePaginator)),
+  ]);
 }

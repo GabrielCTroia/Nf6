@@ -3,7 +3,7 @@ import puppeteer, { Page } from 'puppeteer';
 import LineByLineReader from 'line-by-line';
 import { Path, pathOr } from 'ramda';
 import { isArray } from 'util';
-import { Readable } from 'stream';
+import { Readable, ReadableOptions } from 'stream';
 
 export const saveToFile = (path: string, content: string) => {
   return new Promise((resolve, reject) => {
@@ -36,10 +36,25 @@ export const delay = (ms: number) => {
   });
 }
 
+export const getRandom = (max: number, min = 0) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 
 export enum FetchHTMLExceptions {
   InvalidHTML,
   LookupSelectorNotFound,
+}
+
+let c = 0;
+const fakeFetch = async () => {
+  console.log('fake fetching', `http://google.com/page=${++c}`, '~5s');
+
+  const data = await c < 40 ? c : null;
+
+  await delay(1 * 10);
+
+  return data;
 }
 
 export const fetchHTML = async (url: string, opts: {
@@ -136,14 +151,17 @@ export const forEachAsync = async <T, R>(cb: (r: T) => R, arr: T[] | Iterable<T>
 export const fetchAsStream = <T>(fetchNextData: () => Promise<T | null>) => {
   const stream = new Readable({
     objectMode: true,
-    read() { },
+    async read() {
+      const data = await fetchNextData();
+
+      if (!stream.push(data)) {
+        // TODO: If it cannot read anymore it should stop but not sure why, not just pause?
+        // Src: https://nodejs.org/es/docs/guides/backpressuring-in-streams/#rules-specific-to-readable-streams
+        return;
+      }
+
+    },
   });
-
-  stream._read = async () => {
-    const data = await fetchNextData();
-
-    stream.push(data);
-  }
 
   return stream;
 }
