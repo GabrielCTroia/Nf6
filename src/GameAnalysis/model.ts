@@ -1,4 +1,4 @@
-import { getModel } from "../lib/Model";
+import { Model } from "../lib/Model";
 
 export type AnalysisTallyRecord = {
   excellent: number;
@@ -46,7 +46,7 @@ export type AnalysisRecord = {
   }
 }
  
-export const model = getModel<AnalysisRecord>({
+export const model = new Model<AnalysisRecord>({
   name: 'gameAnalsysis',
   keyExtractor: (r) => r.gameId,
 });

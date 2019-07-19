@@ -42,40 +42,101 @@ const createOrUpdate = <R>(db: JsonDB, path: string, record: R) => {
   }
 }
 
-export const getModel = <R>({ name, path = `/${name}`, keyExtractor }: {
-  name: string;
-  keyExtractor: (r: R) => string;
-  path?: string;
-}) => {
-  const db = new JsonDB(new Config(`./db/${name}`, true, true, '/'));
+export class Model<R> {
+  private db: JsonDB;
+  private path: string;
+  private keyExtractor: (r: R) => string;
 
-  return {
-    read: (key: string) => read<R>(db, `${path}/${key}`),
-    createOrUpdate: (record: R, key: string = keyExtractor(record)) => createOrUpdate(db, `${path}/${key}`, record),
-    all: () => db.filter<R>(`${path}`, () => true) || [],
-    filter: (cb: (r: R) => boolean) => db.filter<R>(`${path}`, cb) || [],
-    map: <T>(cb: (r: R) => T) => {
-      const res: T[] = [];
-
-      // Hack: Make use of the provided method filer since this is the only iterator given
-      db.filter<R>(`${path}`, (r) => {
-        res.push(cb(r));
-
-        // don't fill an extra array
-        return false;
-      });
-
-      return res;
-    },
-    forEach: (cb: (r: R) => void) => {
-      // Hack: Make use of the provided method filer since this is the only iterator given
-      db.filter<R>(`${path}`, (r) => {
-        cb(r);
-
-        // don't fill an extra array
-        return false;
-      });
-    },
-    find: (cb: (r: R) => boolean) => db.find<R>(`${path}`, cb),
+  constructor({ name, path = `/${name}`, keyExtractor }: {
+    name: string;
+    keyExtractor: (r: R) => string;
+    path?: string;
+  }) {
+    this.db = new JsonDB(new Config(`./db/${name}`, true, true, '/'));
+    this.path = path;
+    this.keyExtractor = keyExtractor;
   }
+
+  read(key: string) {
+    read<R>(this.db, `${this.path}/${key}`)
+  }
+
+  createOrUpdate(record: R, key: string = this.keyExtractor(record)) {
+    return createOrUpdate(this.db, `${this.path}/${key}`, record);
+  }
+
+  all() {
+    return this.db.filter<R>(`${this.path}`, () => true) || [];
+  }
+
+  filter(cb: (r: R) => boolean) {
+    return this.db.filter<R>(`${this.path}`, cb) || [];
+  }
+
+  map<T>(cb: (r: R) => T) {
+    const res: T[] = [];
+
+    // Hack: Make use of the provided method filer since this is the only iterator given
+    this.db.filter<R>(`${this.path}`, (r) => {
+      res.push(cb(r));
+
+      // don't fill an extra array
+      return false;
+    });
+
+    return res;
+  }
+
+  forEach(cb: (r: R) => void) {
+    // Hack: Make use of the provided method filer since this is the only iterator given
+    this.db.filter<R>(`${this.path}`, (r) => {
+      cb(r);
+
+      // don't fill an extra array
+      return false;
+    });
+  }
+
+  find(cb: (r: R) => boolean) {
+    return this.db.find<R>(`${this.path}`, cb)
+  }
+
 }
+
+// export const getModel = <R>({ name, path = `/${name}`, keyExtractor }: {
+//   name: string;
+//   keyExtractor: (r: R) => string;
+//   path?: string;
+// }) => {
+//   const db = new JsonDB(new Config(`./db/${name}`, true, true, '/'));
+
+//   return {
+//     read: (key: string) => read<R>(db, `${path}/${key}`),
+//     createOrUpdate: (record: R, key: string = keyExtractor(record)) => createOrUpdate(db, `${path}/${key}`, record),
+//     all: () => db.filter<R>(`${path}`, () => true) || [],
+//     filter: (cb: (r: R) => boolean) => db.filter<R>(`${path}`, cb) || [],
+//     map: <T>(cb: (r: R) => T) => {
+//       const res: T[] = [];
+
+//       // Hack: Make use of the provided method filer since this is the only iterator given
+//       db.filter<R>(`${path}`, (r) => {
+//         res.push(cb(r));
+
+//         // don't fill an extra array
+//         return false;
+//       });
+
+//       return res;
+//     },
+//     forEach: (cb: (r: R) => void) => {
+//       // Hack: Make use of the provided method filer since this is the only iterator given
+//       db.filter<R>(`${path}`, (r) => {
+//         cb(r);
+
+//         // don't fill an extra array
+//         return false;
+//       });
+//     },
+//     find: (cb: (r: R) => boolean) => db.find<R>(`${path}`, cb),
+//   }
+// }

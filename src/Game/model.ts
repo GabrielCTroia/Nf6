@@ -1,4 +1,4 @@
-import { getModel } from '../lib/Model';
+import { Model } from '../lib/Model';
 
 export type PlayerResult = '1' | '0' | '.5';
 
@@ -24,7 +24,7 @@ export type GameRecord = {
   };
 }
 
-export const gameModel = getModel<GameRecord>({
+export const gameModel = new Model<GameRecord>({
   name: 'game',
   keyExtractor: (r) => r.id,
 });

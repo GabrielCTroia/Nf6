@@ -1,6 +1,7 @@
 import { parse } from './parser';
-import { fetchHTML, FetchHTMLExceptions, fetchAsStream, delay, getRandom } from '../lib/util';
+import { fetchHTML, FetchHTMLExceptions, fetchAsStream, delay, getRandom, saveToModelAsStream } from '../lib/util';
 import multistream = require('multistream');
+import { gameModel } from './model';
 
 enum GameTypes {
   live = 'live',
@@ -53,12 +54,15 @@ const fetch = async (paginator: Paginator) => {
   }
 }
 
+
+
 export const scrape = (username: string) => {
-  const livePaginator = getPaginator(username, GameTypes.live, 43);
+  const livePaginator = getPaginator(username, GameTypes.live);
   const dailyPaginator = getPaginator(username, GameTypes.daily);
 
   return multistream.obj([
     fetchAsStream(() => fetch(dailyPaginator)),
     fetchAsStream(() => fetch(livePaginator)),
-  ]);
+  ])
+    .pipe(saveToModelAsStream(gameModel));
 }

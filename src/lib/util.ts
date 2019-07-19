@@ -3,7 +3,8 @@ import puppeteer, { Page } from 'puppeteer';
 import LineByLineReader from 'line-by-line';
 import { Path, pathOr } from 'ramda';
 import { isArray } from 'util';
-import { Readable, ReadableOptions } from 'stream';
+import { Readable, ReadableOptions, Writable } from 'stream';
+import { Model } from './Model';
 
 export const saveToFile = (path: string, content: string) => {
   return new Promise((resolve, reject) => {
@@ -164,4 +165,21 @@ export const fetchAsStream = <T>(fetchNextData: () => Promise<T | null>) => {
   });
 
   return stream;
+}
+
+
+// TODO: I really need to add typesafety to these streams
+export const saveToModelAsStream = <R>(model: Model<R>) => {
+  return new Writable({
+    objectMode: true,
+    write: async (data: R[], _, next) => {
+      data.forEach((item) => {
+        model.createOrUpdate(item);
+      });
+
+      console.log('Done persisting to DB.');
+
+      next();
+    }
+  })
 }
