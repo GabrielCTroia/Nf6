@@ -1,38 +1,61 @@
-import request from 'request';
-import { saveToFile, delay, readEachLineAsync } from '../util';
+import { fetchAsStream, saveToModelAsStream, delay, getRandom, fetchJSON } from '../lib/util';
+import { gameAnalysisModel, GameAnalysisRecord } from './model';
+import { parse } from './parser';
+import { GameRecord } from '../Game/model';
 
-const req = (gameId: string) => {
-  console.log('Url', `https://chess.com/callback/analysis/game/live/${gameId}/all`);
+const fetch = async (getNextGame: () => GameRecord | void): Promise<GameAnalysisRecord[] | null> => {
+  const nextGame = getNextGame();
 
-  request({
-    url: `https://chess.com/callback/analysis/game/live/${gameId}/all`,
-    method: 'GET',
-    followAllRedirects: true,
-  }, async (error, res) => {
-    if (error) {
-      console.log('Error', error);
-      return;
-    }
-    
-    await saveToFile(`./data/games/${gameId}.json`, res.body)
-
-    console.log('  - done');
-  });
-}
-
-readEachLineAsync('./data/all_games_07152019.json', async (line, i) => {
-  const game = JSON.parse(line);
-
-  if (game.white.hasOwnProperty('accuracy')) {
-    console.log(i, game.id);
-
-    req(game.id);
-
-    const waitTimeSeconds = 5 + Math.floor(Math.random() * 5);
-    
-    console.log(`Wait ${waitTimeSeconds}s`);
-    await delay(waitTimeSeconds * 1000);
+  // End the stream when there are no more games.
+  if (!nextGame) {
+    return null;
   }
 
-  return;
-});
+  const url = `https://chess.com/callback/analysis/game/live/${nextGame.id}/all`;
+
+  console.log('Fetching', url);
+
+  return fetchJSON(url)
+    .then((rawAnalysis) => parse(rawAnalysis, nextGame.id))
+    .then((r) => [r]) // as array
+    .catch((e) => {
+      //  if (e === ParseExceptions.InvalidData) {
+      //    // Be permissive on errors and let the stream run when encountering one
+
+      //    // TODO: This might actually break the creation
+      //    // This is actually where the Either<left, right> could work nicely
+      //    //  io-ts I'm looking at you!
+      //    // return {};
+      //    // return;
+      //  }
+
+      console.log('GameAnalysis FetchError', nextGame.id, e);
+
+      throw e;
+    })
+    .then(async (data) => {
+      const waitSeconds = getRandom(15, 5);
+
+      console.log(' Done.');
+      console.log(` Friendly wait for ${waitSeconds} seconds!`);
+
+      await delay(waitSeconds * 1000);
+
+      return data;
+    });
+}
+
+
+export const scrape = (games: GameRecord[]) => {
+  var c = 0;
+  const getNextGame = () => {
+    if (!games[c]) {
+      return undefined;
+    }
+
+    return games[c++];
+  }
+
+  return fetchAsStream(() => fetch(getNextGame))
+    .pipe(saveToModelAsStream(gameAnalysisModel));
+}

@@ -30,10 +30,11 @@ export type AnalysisTallyRecord = {
   inaccuracyGP2: number;
 }
 
-export type AnalysisRecord = {
+export type GameAnalysisRecord = {
   gameId: string;
   arc: string;
   openingName: string;
+  totalPositions: number;
 
   // TODO: I believe this is Played Time not Analysis but need to check for sure!
   playedDatetime: Date,
@@ -46,7 +47,7 @@ export type AnalysisRecord = {
   }
 }
  
-export const model = new Model<AnalysisRecord>({
+export const gameAnalysisModel = new Model<GameAnalysisRecord>({
   name: 'gameAnalsysis',
   keyExtractor: (r) => r.gameId,
 });
