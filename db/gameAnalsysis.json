@@ -1,11 +1,11 @@
 {
-    "analsysis": {
+    "gameAnalsysis": {
         "2793160338": {
             "gameId": "2793160338",
             "arc": "sudden",
             "openingName": "Alekhine Defense: Modern, Larsen Variation",
-            "gameDatetime": "2019-05-21T18:03:30.000Z",
-            "movesCount": 71,
+            "playedDatetime": "2019-05-21T18:03:30.000Z",
+            "totalPositions": 71,
             "white": {
                 "overallTallies": {
                     "excellent": 20,
@@ -64,15 +64,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:29.972Z",
-            "__updatedAt": "2019-07-16T23:13:29.972Z"
+            "__createdAt": "2019-07-19T22:14:15.368Z",
+            "__updatedAt": "2019-07-19T22:14:15.368Z"
         },
         "3656173154": {
             "gameId": "3656173154",
             "arc": "smooth",
             "openingName": "Italian Game",
-            "gameDatetime": "2019-04-29T08:07:10.000Z",
-            "movesCount": 61,
+            "playedDatetime": "2019-04-29T08:07:10.000Z",
+            "totalPositions": 61,
             "white": {
                 "overallTallies": {
                     "excellent": 18,
@@ -131,15 +131,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:29.989Z",
-            "__updatedAt": "2019-07-16T23:13:29.989Z"
+            "__createdAt": "2019-07-19T22:14:29.755Z",
+            "__updatedAt": "2019-07-19T22:14:29.755Z"
         },
         "3679382808": {
             "gameId": "3679382808",
             "arc": "wild",
             "openingName": "King's Pawn Opening: Owen Defense, 2.d4 Bb7",
-            "gameDatetime": "2019-05-21T20:42:14.000Z",
-            "movesCount": 104,
+            "playedDatetime": "2019-05-21T20:42:14.000Z",
+            "totalPositions": 104,
             "white": {
                 "overallTallies": {
                     "excellent": 26,
@@ -198,15 +198,15 @@
                     "inaccuracyGP2": 2
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.007Z",
-            "__updatedAt": "2019-07-16T23:13:30.007Z"
+            "__createdAt": "2019-07-19T22:14:38.302Z",
+            "__updatedAt": "2019-07-19T22:14:38.302Z"
         },
         "3696245405": {
             "gameId": "3696245405",
             "arc": "sharp",
             "openingName": "Caro-Kann Defense: Classical Variation",
-            "gameDatetime": "2019-05-21T20:40:17.000Z",
-            "movesCount": 117,
+            "playedDatetime": "2019-05-21T20:40:17.000Z",
+            "totalPositions": 117,
             "white": {
                 "overallTallies": {
                     "excellent": 33,
@@ -265,15 +265,15 @@
                     "inaccuracyGP2": 3
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.023Z",
-            "__updatedAt": "2019-07-16T23:13:30.023Z"
+            "__createdAt": "2019-07-19T22:14:44.955Z",
+            "__updatedAt": "2019-07-19T22:14:44.955Z"
         },
         "3698219499": {
             "gameId": "3698219499",
             "arc": "smooth",
             "openingName": "Philidor Defense",
-            "gameDatetime": "2019-05-21T19:05:56.000Z",
-            "movesCount": 58,
+            "playedDatetime": "2019-05-21T19:05:56.000Z",
+            "totalPositions": 58,
             "white": {
                 "overallTallies": {
                     "excellent": 22,
@@ -332,15 +332,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.038Z",
-            "__updatedAt": "2019-07-16T23:13:30.038Z"
+            "__createdAt": "2019-07-19T22:14:57.591Z",
+            "__updatedAt": "2019-07-19T22:14:57.591Z"
         },
         "3711484940": {
             "gameId": "3711484940",
             "arc": "throwAway",
             "openingName": "Sicilian Defense: Closed, Traditional Line, 3.Bb5",
-            "gameDatetime": "2019-05-19T16:06:25.000Z",
-            "movesCount": 46,
+            "playedDatetime": "2019-05-19T16:06:25.000Z",
+            "totalPositions": 46,
             "white": {
                 "overallTallies": {
                     "excellent": 15,
@@ -399,15 +399,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.053Z",
-            "__updatedAt": "2019-07-16T23:13:30.053Z"
+            "__createdAt": "2019-07-19T22:15:06.011Z",
+            "__updatedAt": "2019-07-19T22:15:06.011Z"
         },
         "3712433642": {
             "gameId": "3712433642",
             "arc": "rough",
             "openingName": "Pirc Defense: Main Line",
-            "gameDatetime": "2019-05-19T22:07:10.000Z",
-            "movesCount": 32,
+            "playedDatetime": "2019-05-19T22:07:10.000Z",
+            "totalPositions": 32,
             "white": {
                 "overallTallies": {
                     "excellent": 11,
@@ -466,15 +466,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.069Z",
-            "__updatedAt": "2019-07-16T23:13:30.069Z"
+            "__createdAt": "2019-07-19T22:15:13.685Z",
+            "__updatedAt": "2019-07-19T22:15:13.685Z"
         },
         "3715057256": {
             "gameId": "3715057256",
             "arc": "throwAway",
             "openingName": "Scotch Game: Goering, Double Pawn Sacrifice Variation, 5...cxb2 6.Bxb2",
-            "gameDatetime": "2019-05-20T22:01:32.000Z",
-            "movesCount": 41,
+            "playedDatetime": "2019-05-20T22:01:32.000Z",
+            "totalPositions": 41,
             "white": {
                 "overallTallies": {
                     "excellent": 11,
@@ -533,15 +533,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.083Z",
-            "__updatedAt": "2019-07-16T23:13:30.083Z"
+            "__createdAt": "2019-07-19T22:15:20.365Z",
+            "__updatedAt": "2019-07-19T22:15:20.365Z"
         },
         "3715155093": {
             "gameId": "3715155093",
             "arc": "throwAway",
             "openingName": "Four Knights Game: Scotch Variation Accepted, 5.Nxd4 d6",
-            "gameDatetime": "2019-05-21T11:42:44.000Z",
-            "movesCount": 115,
+            "playedDatetime": "2019-05-21T11:42:44.000Z",
+            "totalPositions": 115,
             "white": {
                 "overallTallies": {
                     "excellent": 34,
@@ -600,15 +600,15 @@
                     "inaccuracyGP2": 3
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.097Z",
-            "__updatedAt": "2019-07-16T23:13:30.097Z"
+            "__createdAt": "2019-07-19T22:15:31.776Z",
+            "__updatedAt": "2019-07-19T22:15:31.776Z"
         },
         "3717502316": {
             "gameId": "3717502316",
             "arc": "throwAway",
             "openingName": "Bishop's Opening: Berlin Defense, 3.d3 Nc6",
-            "gameDatetime": "2019-05-21T19:28:07.000Z",
-            "movesCount": 89,
+            "playedDatetime": "2019-05-21T19:28:07.000Z",
+            "totalPositions": 89,
             "white": {
                 "overallTallies": {
                     "excellent": 33,
@@ -667,15 +667,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.112Z",
-            "__updatedAt": "2019-07-16T23:13:30.112Z"
+            "__createdAt": "2019-07-19T22:15:38.453Z",
+            "__updatedAt": "2019-07-19T22:15:38.453Z"
         },
         "3728993197": {
             "gameId": "3728993197",
             "arc": "throwAway",
             "openingName": "Scotch Game: 3...exd4 4.Nxd4",
-            "gameDatetime": "2019-05-25T23:44:48.000Z",
-            "movesCount": 139,
+            "playedDatetime": "2019-05-25T23:44:48.000Z",
+            "totalPositions": 139,
             "white": {
                 "overallTallies": {
                     "excellent": 38,
@@ -734,15 +734,15 @@
                     "inaccuracyGP2": 1
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.126Z",
-            "__updatedAt": "2019-07-16T23:13:30.126Z"
+            "__createdAt": "2019-07-19T22:15:44.098Z",
+            "__updatedAt": "2019-07-19T22:15:44.098Z"
         },
         "3730352315": {
             "gameId": "3730352315",
             "arc": "wild",
             "openingName": "Vienna Game: Falkbeer, Mengarini Variation",
-            "gameDatetime": "2019-05-26T14:17:52.000Z",
-            "movesCount": 87,
+            "playedDatetime": "2019-05-26T14:17:52.000Z",
+            "totalPositions": 87,
             "white": {
                 "overallTallies": {
                     "excellent": 21,
@@ -801,15 +801,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.140Z",
-            "__updatedAt": "2019-07-16T23:13:30.140Z"
+            "__createdAt": "2019-07-19T22:15:52.558Z",
+            "__updatedAt": "2019-07-19T22:15:52.558Z"
         },
         "3736823084": {
             "gameId": "3736823084",
             "arc": "wild",
             "openingName": "Sicilian Defense: Closed, Traditional Line, 3.Nf3",
-            "gameDatetime": "2019-05-28T20:38:19.000Z",
-            "movesCount": 85,
+            "playedDatetime": "2019-05-28T20:38:19.000Z",
+            "totalPositions": 85,
             "white": {
                 "overallTallies": {
                     "excellent": 16,
@@ -868,15 +868,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.155Z",
-            "__updatedAt": "2019-07-16T23:13:30.155Z"
+            "__createdAt": "2019-07-19T22:16:03.034Z",
+            "__updatedAt": "2019-07-19T22:16:03.034Z"
         },
         "3737204231": {
             "gameId": "3737204231",
             "arc": "smooth",
             "openingName": "Scotch Game: Classical, Blackburne Attack",
-            "gameDatetime": "2019-05-28T22:39:10.000Z",
-            "movesCount": 51,
+            "playedDatetime": "2019-05-28T22:39:10.000Z",
+            "totalPositions": 51,
             "white": {
                 "overallTallies": {
                     "excellent": 19,
@@ -935,15 +935,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.169Z",
-            "__updatedAt": "2019-07-16T23:13:30.169Z"
+            "__createdAt": "2019-07-19T22:16:11.883Z",
+            "__updatedAt": "2019-07-19T22:16:11.883Z"
         },
         "3737607966": {
             "gameId": "3737607966",
             "arc": "throwAway",
             "openingName": "Giuoco Piano Game: Main Line, Giuoco Pianissimo Variation",
-            "gameDatetime": "2019-05-29T02:21:24.000Z",
-            "movesCount": 74,
+            "playedDatetime": "2019-05-29T02:21:24.000Z",
+            "totalPositions": 74,
             "white": {
                 "overallTallies": {
                     "excellent": 26,
@@ -1002,15 +1002,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.182Z",
-            "__updatedAt": "2019-07-16T23:13:30.182Z"
+            "__createdAt": "2019-07-19T22:16:25.632Z",
+            "__updatedAt": "2019-07-19T22:16:25.632Z"
         },
         "3741768659": {
             "gameId": "3741768659",
             "arc": "throwAway",
             "openingName": "Italian Game: Knight Attack, Polerio, Bishop Check, Suhle Defense, 9.Nf3 e4",
-            "gameDatetime": "2019-05-30T16:03:07.000Z",
-            "movesCount": 66,
+            "playedDatetime": "2019-05-30T16:03:07.000Z",
+            "totalPositions": 66,
             "white": {
                 "overallTallies": {
                     "excellent": 21,
@@ -1069,15 +1069,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.196Z",
-            "__updatedAt": "2019-07-16T23:13:30.196Z"
+            "__createdAt": "2019-07-19T22:16:41.253Z",
+            "__updatedAt": "2019-07-19T22:16:41.253Z"
         },
         "3742694071": {
             "gameId": "3742694071",
             "arc": "throwAway",
             "openingName": "Philidor Defense",
-            "gameDatetime": "2019-05-30T21:56:04.000Z",
-            "movesCount": 44,
+            "playedDatetime": "2019-05-30T21:56:04.000Z",
+            "totalPositions": 44,
             "white": {
                 "overallTallies": {
                     "excellent": 10,
@@ -1136,15 +1136,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.209Z",
-            "__updatedAt": "2019-07-16T23:13:30.209Z"
+            "__createdAt": "2019-07-19T22:16:50.619Z",
+            "__updatedAt": "2019-07-19T22:16:50.619Z"
         },
         "3742949003": {
             "gameId": "3742949003",
             "arc": "rough",
             "openingName": "Queen's Pawn Opening: 1...d5 2.e3 Nf6",
-            "gameDatetime": "2019-05-30T23:51:28.000Z",
-            "movesCount": 26,
+            "playedDatetime": "2019-05-30T23:51:28.000Z",
+            "totalPositions": 26,
             "white": {
                 "overallTallies": {
                     "excellent": 3,
@@ -1203,15 +1203,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.223Z",
-            "__updatedAt": "2019-07-16T23:13:30.223Z"
+            "__createdAt": "2019-07-19T22:17:01.974Z",
+            "__updatedAt": "2019-07-19T22:17:01.974Z"
         },
         "3742984419": {
             "gameId": "3742984419",
             "arc": "rough",
             "openingName": "Indian Game: East Indian, Seirawan Attack",
-            "gameDatetime": "2019-05-31T15:07:30.000Z",
-            "movesCount": 62,
+            "playedDatetime": "2019-05-31T15:07:30.000Z",
+            "totalPositions": 62,
             "white": {
                 "overallTallies": {
                     "excellent": 25,
@@ -1270,15 +1270,15 @@
                     "inaccuracyGP2": 1
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.238Z",
-            "__updatedAt": "2019-07-16T23:13:30.238Z"
+            "__createdAt": "2019-07-19T22:17:16.358Z",
+            "__updatedAt": "2019-07-19T22:17:16.358Z"
         },
         "3747032478": {
             "gameId": "3747032478",
             "arc": "wild",
             "openingName": "Three Knights Opening",
-            "gameDatetime": "2019-06-06T15:51:58.000Z",
-            "movesCount": 79,
+            "playedDatetime": "2019-06-06T15:51:58.000Z",
+            "totalPositions": 79,
             "white": {
                 "overallTallies": {
                     "excellent": 18,
@@ -1337,15 +1337,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.251Z",
-            "__updatedAt": "2019-07-16T23:13:30.251Z"
+            "__createdAt": "2019-07-19T22:17:30.817Z",
+            "__updatedAt": "2019-07-19T22:17:30.817Z"
         },
         "3756185034": {
             "gameId": "3756185034",
             "arc": "smooth",
             "openingName": "Scandinavian Defense: Mieses-Kotroc Variation, 3.Nc3",
-            "gameDatetime": "2019-06-04T21:15:46.000Z",
-            "movesCount": 36,
+            "playedDatetime": "2019-06-04T21:15:46.000Z",
+            "totalPositions": 36,
             "white": {
                 "overallTallies": {
                     "excellent": 12,
@@ -1404,15 +1404,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.263Z",
-            "__updatedAt": "2019-07-16T23:13:30.263Z"
+            "__createdAt": "2019-07-19T22:17:40.479Z",
+            "__updatedAt": "2019-07-19T22:17:40.479Z"
         },
         "3756328156": {
             "gameId": "3756328156",
             "arc": "sudden",
             "openingName": "French Defense: Normal Variation, 2...d5",
-            "gameDatetime": "2019-06-04T22:22:28.000Z",
-            "movesCount": 36,
+            "playedDatetime": "2019-06-04T22:22:28.000Z",
+            "totalPositions": 36,
             "white": {
                 "overallTallies": {
                     "excellent": 8,
@@ -1471,15 +1471,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.277Z",
-            "__updatedAt": "2019-07-16T23:13:30.277Z"
+            "__createdAt": "2019-07-19T22:17:52.108Z",
+            "__updatedAt": "2019-07-19T22:17:52.108Z"
         },
         "3770114177": {
             "gameId": "3770114177",
             "arc": "wild",
             "openingName": "Ponziani Opening: Jaenisch Counterattack",
-            "gameDatetime": "2019-06-10T01:31:55.000Z",
-            "movesCount": 84,
+            "playedDatetime": "2019-06-10T01:31:55.000Z",
+            "totalPositions": 84,
             "white": {
                 "overallTallies": {
                     "excellent": 22,
@@ -1538,15 +1538,15 @@
                     "inaccuracyGP2": 2
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.292Z",
-            "__updatedAt": "2019-07-16T23:13:30.292Z"
+            "__createdAt": "2019-07-19T22:18:02.553Z",
+            "__updatedAt": "2019-07-19T22:18:02.553Z"
         },
         "3775686190": {
             "gameId": "3775686190",
             "arc": "throwAway",
             "openingName": "Sicilian Defense: Taimanov Variation, 5.Nc3",
-            "gameDatetime": "2019-06-12T01:19:19.000Z",
-            "movesCount": 35,
+            "playedDatetime": "2019-06-12T01:19:19.000Z",
+            "totalPositions": 35,
             "white": {
                 "overallTallies": {
                     "excellent": 9,
@@ -1605,15 +1605,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.304Z",
-            "__updatedAt": "2019-07-16T23:13:30.304Z"
+            "__createdAt": "2019-07-19T22:18:13.939Z",
+            "__updatedAt": "2019-07-19T22:18:13.939Z"
         },
         "3783381877": {
             "gameId": "3783381877",
             "arc": "sudden",
             "openingName": "Giuoco Piano Game: Four Knights Game",
-            "gameDatetime": "2019-06-14T21:08:46.000Z",
-            "movesCount": 80,
+            "playedDatetime": "2019-06-14T21:08:46.000Z",
+            "totalPositions": 80,
             "white": {
                 "overallTallies": {
                     "excellent": 24,
@@ -1672,15 +1672,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.318Z",
-            "__updatedAt": "2019-07-16T23:13:30.318Z"
+            "__createdAt": "2019-07-19T22:18:21.796Z",
+            "__updatedAt": "2019-07-19T22:18:21.796Z"
         },
         "3791432544": {
             "gameId": "3791432544",
             "arc": "sharp",
             "openingName": "Queen's Pawn Opening: Zukertort, Chigorin Variation",
-            "gameDatetime": "2019-06-17T20:53:20.000Z",
-            "movesCount": 63,
+            "playedDatetime": "2019-06-17T20:53:20.000Z",
+            "totalPositions": 63,
             "white": {
                 "overallTallies": {
                     "excellent": 16,
@@ -1739,15 +1739,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.330Z",
-            "__updatedAt": "2019-07-16T23:13:30.330Z"
+            "__createdAt": "2019-07-19T22:18:34.377Z",
+            "__updatedAt": "2019-07-19T22:18:34.377Z"
         },
         "3794637038": {
             "gameId": "3794637038",
             "arc": "throwAway",
             "openingName": "Caro-Kann Defense: 2.d4",
-            "gameDatetime": "2019-06-18T23:54:19.000Z",
-            "movesCount": 67,
+            "playedDatetime": "2019-06-18T23:54:19.000Z",
+            "totalPositions": 67,
             "white": {
                 "overallTallies": {
                     "excellent": 17,
@@ -1806,15 +1806,15 @@
                     "inaccuracyGP2": 1
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.343Z",
-            "__updatedAt": "2019-07-16T23:13:30.343Z"
+            "__createdAt": "2019-07-19T22:18:44.827Z",
+            "__updatedAt": "2019-07-19T22:18:44.827Z"
         },
         "3799534375": {
             "gameId": "3799534375",
             "arc": "sudden",
             "openingName": "Scotch Game",
-            "gameDatetime": "2019-06-20T19:32:48.000Z",
-            "movesCount": 71,
+            "playedDatetime": "2019-06-20T19:32:48.000Z",
+            "totalPositions": 71,
             "white": {
                 "overallTallies": {
                     "excellent": 23,
@@ -1873,15 +1873,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.355Z",
-            "__updatedAt": "2019-07-16T23:13:30.355Z"
+            "__createdAt": "2019-07-19T22:18:58.219Z",
+            "__updatedAt": "2019-07-19T22:18:58.219Z"
         },
         "3804692497": {
             "gameId": "3804692497",
             "arc": "throwAway",
             "openingName": "Philidor Defense",
-            "gameDatetime": "2019-06-22T18:22:20.000Z",
-            "movesCount": 101,
+            "playedDatetime": "2019-06-22T18:22:20.000Z",
+            "totalPositions": 101,
             "white": {
                 "overallTallies": {
                     "excellent": 27,
@@ -1940,15 +1940,15 @@
                     "inaccuracyGP2": 1
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.370Z",
-            "__updatedAt": "2019-07-16T23:13:30.370Z"
+            "__createdAt": "2019-07-19T22:19:09.035Z",
+            "__updatedAt": "2019-07-19T22:19:09.035Z"
         },
         "3812380265": {
             "gameId": "3812380265",
             "arc": "throwAway",
             "openingName": "Italian Game: Two Knights, Modern Bishop's Opening",
-            "gameDatetime": "2019-06-25T15:15:05.000Z",
-            "movesCount": 77,
+            "playedDatetime": "2019-06-25T15:15:05.000Z",
+            "totalPositions": 77,
             "white": {
                 "overallTallies": {
                     "excellent": 24,
@@ -2007,15 +2007,15 @@
                     "inaccuracyGP2": 1
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.382Z",
-            "__updatedAt": "2019-07-16T23:13:30.382Z"
+            "__createdAt": "2019-07-19T22:19:18.712Z",
+            "__updatedAt": "2019-07-19T22:19:18.712Z"
         },
         "3812438993": {
             "gameId": "3812438993",
             "arc": "sudden",
             "openingName": "King's Pawn Opening: Wayward Queen, Kiddie Countergambit",
-            "gameDatetime": "2019-06-25T15:44:07.000Z",
-            "movesCount": 78,
+            "playedDatetime": "2019-06-25T15:44:07.000Z",
+            "totalPositions": 78,
             "white": {
                 "overallTallies": {
                     "excellent": 24,
@@ -2074,15 +2074,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.395Z",
-            "__updatedAt": "2019-07-16T23:13:30.395Z"
+            "__createdAt": "2019-07-19T22:19:31.175Z",
+            "__updatedAt": "2019-07-19T22:19:31.175Z"
         },
         "3818285915": {
             "gameId": "3818285915",
             "arc": "rough",
             "openingName": "Philidor Defense: Exchange Variation, 4.Nxd4 Nf6 5.Nc3",
-            "gameDatetime": "2019-07-14T20:37:32.000Z",
-            "movesCount": 46,
+            "playedDatetime": "2019-07-14T20:37:32.000Z",
+            "totalPositions": 46,
             "white": {
                 "overallTallies": {
                     "excellent": 16,
@@ -2141,15 +2141,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.410Z",
-            "__updatedAt": "2019-07-16T23:13:30.410Z"
+            "__createdAt": "2019-07-19T22:19:44.565Z",
+            "__updatedAt": "2019-07-19T22:19:44.565Z"
         },
         "3818315913": {
             "gameId": "3818315913",
             "arc": "sharp",
             "openingName": "Modern Defense: Pterodactyl, Semi-Averbakh Variation, 4...d6",
-            "gameDatetime": "2019-06-27T19:07:41.000Z",
-            "movesCount": 121,
+            "playedDatetime": "2019-06-27T19:07:41.000Z",
+            "totalPositions": 121,
             "white": {
                 "overallTallies": {
                     "excellent": 38,
@@ -2208,15 +2208,15 @@
                     "inaccuracyGP2": 4
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.424Z",
-            "__updatedAt": "2019-07-16T23:13:30.424Z"
+            "__createdAt": "2019-07-19T22:19:56.035Z",
+            "__updatedAt": "2019-07-19T22:19:56.035Z"
         },
         "3819131746": {
             "gameId": "3819131746",
             "arc": "throwAway",
             "openingName": "Sicilian Defense: O'Kelly, Yerevan System",
-            "gameDatetime": "2019-06-28T01:58:39.000Z",
-            "movesCount": 49,
+            "playedDatetime": "2019-06-28T01:58:39.000Z",
+            "totalPositions": 49,
             "white": {
                 "overallTallies": {
                     "excellent": 11,
@@ -2275,15 +2275,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.437Z",
-            "__updatedAt": "2019-07-16T23:13:30.437Z"
+            "__createdAt": "2019-07-19T22:20:07.639Z",
+            "__updatedAt": "2019-07-19T22:20:07.639Z"
         },
         "3820503635": {
             "gameId": "3820503635",
             "arc": "rough",
             "openingName": "French Defense: Advance Variation, 3...c5 4.c3 Qb6",
-            "gameDatetime": "2019-06-28T15:52:02.000Z",
-            "movesCount": 99,
+            "playedDatetime": "2019-06-28T15:52:02.000Z",
+            "totalPositions": 99,
             "white": {
                 "overallTallies": {
                     "excellent": 29,
@@ -2342,15 +2342,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.454Z",
-            "__updatedAt": "2019-07-16T23:13:30.454Z"
+            "__createdAt": "2019-07-19T22:20:22.115Z",
+            "__updatedAt": "2019-07-19T22:20:22.115Z"
         },
         "3820961013": {
             "gameId": "3820961013",
             "arc": "wild",
             "openingName": "English Opening",
-            "gameDatetime": "2019-06-28T19:35:28.000Z",
-            "movesCount": 74,
+            "playedDatetime": "2019-06-28T19:35:28.000Z",
+            "totalPositions": 74,
             "white": {
                 "overallTallies": {
                     "excellent": 19,
@@ -2409,15 +2409,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.468Z",
-            "__updatedAt": "2019-07-16T23:13:30.468Z"
+            "__createdAt": "2019-07-19T22:20:30.583Z",
+            "__updatedAt": "2019-07-19T22:20:30.583Z"
         },
         "3821335670": {
             "gameId": "3821335670",
             "arc": "wild",
             "openingName": "Four Knights Game: Scotch Variation Accepted, 5.Nxd4",
-            "gameDatetime": "2019-06-28T22:13:40.000Z",
-            "movesCount": 58,
+            "playedDatetime": "2019-06-28T22:13:40.000Z",
+            "totalPositions": 58,
             "white": {
                 "overallTallies": {
                     "excellent": 11,
@@ -2476,15 +2476,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.481Z",
-            "__updatedAt": "2019-07-16T23:13:30.481Z"
+            "__createdAt": "2019-07-19T22:20:40.979Z",
+            "__updatedAt": "2019-07-19T22:20:40.979Z"
         },
         "3823541174": {
             "gameId": "3823541174",
             "arc": "wild",
             "openingName": "Sicilian Defense: 2.Nf3 d6",
-            "gameDatetime": "2019-06-29T19:13:56.000Z",
-            "movesCount": 96,
+            "playedDatetime": "2019-06-29T19:13:56.000Z",
+            "totalPositions": 96,
             "white": {
                 "overallTallies": {
                     "excellent": 26,
@@ -2543,15 +2543,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.496Z",
-            "__updatedAt": "2019-07-16T23:13:30.496Z"
+            "__createdAt": "2019-07-19T22:20:49.642Z",
+            "__updatedAt": "2019-07-19T22:20:49.642Z"
         },
         "3823650104": {
             "gameId": "3823650104",
             "arc": "throwAway",
             "openingName": "Scandinavian Defense: Mieses-Kotroc Variation, 3.Nc3 Qd8",
-            "gameDatetime": "2019-06-29T19:38:35.000Z",
-            "movesCount": 73,
+            "playedDatetime": "2019-06-29T19:38:35.000Z",
+            "totalPositions": 73,
             "white": {
                 "overallTallies": {
                     "excellent": 16,
@@ -2610,15 +2610,15 @@
                     "inaccuracyGP2": 1
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.510Z",
-            "__updatedAt": "2019-07-16T23:13:30.510Z"
+            "__createdAt": "2019-07-19T22:20:56.057Z",
+            "__updatedAt": "2019-07-19T22:20:56.057Z"
         },
         "3823707407": {
             "gameId": "3823707407",
             "arc": "wild",
             "openingName": "Bishop's Opening: Berlin, Ponziani, Urusov Gambit",
-            "gameDatetime": "2019-06-29T20:12:50.000Z",
-            "movesCount": 134,
+            "playedDatetime": "2019-06-29T20:12:50.000Z",
+            "totalPositions": 134,
             "white": {
                 "overallTallies": {
                     "excellent": 45,
@@ -2677,15 +2677,15 @@
                     "inaccuracyGP2": 3
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.525Z",
-            "__updatedAt": "2019-07-16T23:13:30.525Z"
+            "__createdAt": "2019-07-19T22:21:02.712Z",
+            "__updatedAt": "2019-07-19T22:21:02.712Z"
         },
         "3825637250": {
             "gameId": "3825637250",
             "arc": "wild",
             "openingName": "Scotch Game",
-            "gameDatetime": "2019-06-30T15:20:51.000Z",
-            "movesCount": 135,
+            "playedDatetime": "2019-06-30T15:20:51.000Z",
+            "totalPositions": 135,
             "white": {
                 "overallTallies": {
                     "excellent": 33,
@@ -2744,15 +2744,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.541Z",
-            "__updatedAt": "2019-07-16T23:13:30.541Z"
+            "__createdAt": "2019-07-19T22:21:15.454Z",
+            "__updatedAt": "2019-07-19T22:21:15.454Z"
         },
         "3834613563": {
             "gameId": "3834613563",
             "arc": "rough",
             "openingName": "Pirc Defense: 2.d4 c6",
-            "gameDatetime": "2019-07-03T22:58:20.000Z",
-            "movesCount": 130,
+            "playedDatetime": "2019-07-03T22:58:20.000Z",
+            "totalPositions": 130,
             "white": {
                 "overallTallies": {
                     "excellent": 45,
@@ -2811,15 +2811,15 @@
                     "inaccuracyGP2": 3
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.555Z",
-            "__updatedAt": "2019-07-16T23:13:30.555Z"
+            "__createdAt": "2019-07-19T22:21:26.125Z",
+            "__updatedAt": "2019-07-19T22:21:26.125Z"
         },
         "3847937164": {
             "gameId": "3847937164",
             "arc": "rough",
             "openingName": "Italian Game: Knight Attack, Polerio, Bishop Check Line, 6...c6 7.dxc6 bxc6",
-            "gameDatetime": "2019-07-08T22:55:36.000Z",
-            "movesCount": 33,
+            "playedDatetime": "2019-07-08T22:55:36.000Z",
+            "totalPositions": 33,
             "white": {
                 "overallTallies": {
                     "excellent": 9,
@@ -2878,15 +2878,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.570Z",
-            "__updatedAt": "2019-07-16T23:13:30.570Z"
+            "__createdAt": "2019-07-19T22:21:33.691Z",
+            "__updatedAt": "2019-07-19T22:21:33.691Z"
         },
         "3850455887": {
             "gameId": "3850455887",
             "arc": "rough",
             "openingName": "Three Knights Opening",
-            "gameDatetime": "2019-07-09T21:49:18.000Z",
-            "movesCount": 70,
+            "playedDatetime": "2019-07-09T21:49:18.000Z",
+            "totalPositions": 70,
             "white": {
                 "overallTallies": {
                     "excellent": 23,
@@ -2945,15 +2945,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.583Z",
-            "__updatedAt": "2019-07-16T23:13:30.583Z"
+            "__createdAt": "2019-07-19T22:21:46.133Z",
+            "__updatedAt": "2019-07-19T22:21:46.133Z"
         },
         "3850581567": {
             "gameId": "3850581567",
             "arc": "rough",
             "openingName": "Italian Game: Knight Attack, Polerio, Bishop Check Line, 6...c6 7.dxc6 bxc6",
-            "gameDatetime": "2019-07-09T22:55:24.000Z",
-            "movesCount": 67,
+            "playedDatetime": "2019-07-09T22:55:24.000Z",
+            "totalPositions": 67,
             "white": {
                 "overallTallies": {
                     "excellent": 16,
@@ -3012,15 +3012,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.598Z",
-            "__updatedAt": "2019-07-16T23:13:30.598Z"
+            "__createdAt": "2019-07-19T22:21:52.513Z",
+            "__updatedAt": "2019-07-19T22:21:52.513Z"
         },
         "3852463504": {
             "gameId": "3852463504",
             "arc": "throwAway",
             "openingName": "Sicilian Defense: 2.Nf3 d6",
-            "gameDatetime": "2019-07-10T16:40:41.000Z",
-            "movesCount": 62,
+            "playedDatetime": "2019-07-10T16:40:41.000Z",
+            "totalPositions": 62,
             "white": {
                 "overallTallies": {
                     "excellent": 23,
@@ -3079,15 +3079,15 @@
                     "inaccuracyGP2": 1
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.613Z",
-            "__updatedAt": "2019-07-16T23:13:30.613Z"
+            "__createdAt": "2019-07-19T22:22:07.903Z",
+            "__updatedAt": "2019-07-19T22:22:07.903Z"
         },
         "3852530543": {
             "gameId": "3852530543",
             "arc": "sharp",
             "openingName": "Ruy Lopez Opening: Old Steinitz Defense, 4.d4 Bd7",
-            "gameDatetime": "2019-07-10T17:17:38.000Z",
-            "movesCount": 66,
+            "playedDatetime": "2019-07-10T17:17:38.000Z",
+            "totalPositions": 66,
             "white": {
                 "overallTallies": {
                     "excellent": 21,
@@ -3146,15 +3146,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.628Z",
-            "__updatedAt": "2019-07-16T23:13:30.628Z"
+            "__createdAt": "2019-07-19T22:22:23.321Z",
+            "__updatedAt": "2019-07-19T22:22:23.321Z"
         },
         "3853065381": {
             "gameId": "3853065381",
             "arc": "sharp",
             "openingName": "French Defense: Advance Variation, 3...c5 4.c3",
-            "gameDatetime": "2019-07-10T20:51:22.000Z",
-            "movesCount": 87,
+            "playedDatetime": "2019-07-10T20:51:22.000Z",
+            "totalPositions": 87,
             "white": {
                 "overallTallies": {
                     "excellent": 24,
@@ -3213,15 +3213,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.642Z",
-            "__updatedAt": "2019-07-16T23:13:30.642Z"
+            "__createdAt": "2019-07-19T22:22:28.803Z",
+            "__updatedAt": "2019-07-19T22:22:28.803Z"
         },
         "3853274246": {
             "gameId": "3853274246",
             "arc": "throwAway",
             "openingName": "Queen's Pawn Opening: Mason Attack",
-            "gameDatetime": "2019-07-10T22:37:58.000Z",
-            "movesCount": 103,
+            "playedDatetime": "2019-07-10T22:37:58.000Z",
+            "totalPositions": 103,
             "white": {
                 "overallTallies": {
                     "excellent": 27,
@@ -3280,15 +3280,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.658Z",
-            "__updatedAt": "2019-07-16T23:13:30.658Z"
+            "__createdAt": "2019-07-19T22:22:39.472Z",
+            "__updatedAt": "2019-07-19T22:22:39.472Z"
         },
         "3855340486": {
             "gameId": "3855340486",
             "arc": "throwAway",
             "openingName": "Old Benoni Defense: Franco-Benoni Defense",
-            "gameDatetime": "2019-07-14T20:38:45.000Z",
-            "movesCount": 47,
+            "playedDatetime": "2019-07-14T20:38:45.000Z",
+            "totalPositions": 47,
             "white": {
                 "overallTallies": {
                     "excellent": 8,
@@ -3347,15 +3347,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.673Z",
-            "__updatedAt": "2019-07-16T23:13:30.673Z"
+            "__createdAt": "2019-07-19T22:22:51.077Z",
+            "__updatedAt": "2019-07-19T22:22:51.077Z"
         },
         "3856217083": {
             "gameId": "3856217083",
             "arc": "throwAway",
             "openingName": "Slav Defense: Modern, Quiet, Schallopp Defense, 5.Nc3",
-            "gameDatetime": "2019-07-12T01:02:06.000Z",
-            "movesCount": 155,
+            "playedDatetime": "2019-07-12T01:02:06.000Z",
+            "totalPositions": 155,
             "white": {
                 "overallTallies": {
                     "excellent": 45,
@@ -3414,15 +3414,15 @@
                     "inaccuracyGP2": 4
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.690Z",
-            "__updatedAt": "2019-07-16T23:13:30.690Z"
+            "__createdAt": "2019-07-19T22:22:57.546Z",
+            "__updatedAt": "2019-07-19T22:22:57.546Z"
         },
         "3858157440": {
             "gameId": "3858157440",
             "arc": "sudden",
             "openingName": "Center Game Accepted: Kieseritzky Variation, 3...c5 4.Bc4",
-            "gameDatetime": "2019-07-12T18:21:10.000Z",
-            "movesCount": 46,
+            "playedDatetime": "2019-07-12T18:21:10.000Z",
+            "totalPositions": 46,
             "white": {
                 "overallTallies": {
                     "excellent": 17,
@@ -3481,15 +3481,15 @@
                     "inaccuracyGP2": 0
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.705Z",
-            "__updatedAt": "2019-07-16T23:13:30.705Z"
+            "__createdAt": "2019-07-19T22:23:03.115Z",
+            "__updatedAt": "2019-07-19T22:23:03.115Z"
         },
         "3858322265": {
             "gameId": "3858322265",
             "arc": "rough",
             "openingName": "Ruy Lopez Opening: Spanish Countergambit, 4.Nxe5",
-            "gameDatetime": "2019-07-12T19:58:06.000Z",
-            "movesCount": 97,
+            "playedDatetime": "2019-07-12T19:58:06.000Z",
+            "totalPositions": 97,
             "white": {
                 "overallTallies": {
                     "excellent": 33,
@@ -3548,15 +3548,15 @@
                     "inaccuracyGP2": 2
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.720Z",
-            "__updatedAt": "2019-07-16T23:13:30.720Z"
+            "__createdAt": "2019-07-19T22:23:08.968Z",
+            "__updatedAt": "2019-07-19T22:23:08.968Z"
         },
         "3858565392": {
             "gameId": "3858565392",
             "arc": "wild",
             "openingName": "King's Pawn Opening: St. George, Zilbermints Gambit",
-            "gameDatetime": "2019-07-12T22:07:54.000Z",
-            "movesCount": 93,
+            "playedDatetime": "2019-07-12T22:07:54.000Z",
+            "totalPositions": 93,
             "white": {
                 "overallTallies": {
                     "excellent": 23,
@@ -3615,15 +3615,15 @@
                     "inaccuracyGP2": 2
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.735Z",
-            "__updatedAt": "2019-07-16T23:13:30.735Z"
+            "__createdAt": "2019-07-19T22:23:19.054Z",
+            "__updatedAt": "2019-07-19T22:23:19.054Z"
         },
         "3861196558": {
             "gameId": "3861196558",
             "arc": "wild",
             "openingName": "Alekhine Defense: Scandinavian Variation, 3.exd5",
-            "gameDatetime": "2019-07-13T21:27:30.000Z",
-            "movesCount": 134,
+            "playedDatetime": "2019-07-13T21:27:30.000Z",
+            "totalPositions": 134,
             "white": {
                 "overallTallies": {
                     "excellent": 41,
@@ -3682,8 +3682,209 @@
                     "inaccuracyGP2": 2
                 }
             },
-            "__createdAt": "2019-07-16T23:13:30.750Z",
-            "__updatedAt": "2019-07-16T23:13:30.750Z"
+            "__createdAt": "2019-07-19T22:23:32.473Z",
+            "__updatedAt": "2019-07-19T22:23:32.473Z"
+        },
+        "3868925478": {
+            "gameId": "3868925478",
+            "arc": "throwAway",
+            "openingName": "Sicilian Defense: Closed, Traditional Line, 3.Nf3",
+            "playedDatetime": "2019-07-16T18:33:37.000Z",
+            "totalPositions": 76,
+            "white": {
+                "overallTallies": {
+                    "excellent": 18,
+                    "good": 7,
+                    "inaccuracy": 7,
+                    "mistake": 1,
+                    "blunder": 5,
+                    "forced": 0,
+                    "book": 5,
+                    "missedMate": 0,
+                    "fasterMate": 0,
+                    "winningToLosing": 0,
+                    "missedWin": 0,
+                    "critical": 2,
+                    "brilliant": 0,
+                    "blunderGP0": 0,
+                    "missedWinGP0": 0,
+                    "mistakeGP0": 0,
+                    "inaccuracyGP0": 0,
+                    "blunderGP1": 1,
+                    "missedWinGP1": 0,
+                    "mistakeGP1": 1,
+                    "inaccuracyGP1": 7,
+                    "blunderGP2": 4,
+                    "missedWinGP2": 0,
+                    "mistakeGP2": 0,
+                    "inaccuracyGP2": 0
+                }
+            },
+            "black": {
+                "overallTallies": {
+                    "excellent": 20,
+                    "good": 10,
+                    "inaccuracy": 6,
+                    "mistake": 1,
+                    "blunder": 0,
+                    "forced": 0,
+                    "book": 4,
+                    "missedMate": 1,
+                    "fasterMate": 0,
+                    "winningToLosing": 0,
+                    "missedWin": 0,
+                    "critical": 1,
+                    "brilliant": 0,
+                    "blunderGP0": 0,
+                    "missedWinGP0": 0,
+                    "mistakeGP0": 0,
+                    "inaccuracyGP0": 1,
+                    "blunderGP1": 0,
+                    "missedWinGP1": 0,
+                    "mistakeGP1": 1,
+                    "inaccuracyGP1": 5,
+                    "blunderGP2": 0,
+                    "missedWinGP2": 0,
+                    "mistakeGP2": 0,
+                    "inaccuracyGP2": 0
+                }
+            },
+            "__createdAt": "2019-07-19T22:23:46.942Z",
+            "__updatedAt": "2019-07-19T22:23:46.942Z"
+        },
+        "3874437188": {
+            "gameId": "3874437188",
+            "arc": "rough",
+            "openingName": "Slav Defense: 3.e3",
+            "playedDatetime": "2019-07-18T18:49:21.000Z",
+            "totalPositions": 96,
+            "white": {
+                "overallTallies": {
+                    "excellent": 34,
+                    "good": 5,
+                    "inaccuracy": 6,
+                    "mistake": 0,
+                    "blunder": 3,
+                    "forced": 0,
+                    "book": 4,
+                    "missedMate": 0,
+                    "fasterMate": 0,
+                    "winningToLosing": 0,
+                    "missedWin": 0,
+                    "critical": 2,
+                    "brilliant": 0,
+                    "blunderGP0": 0,
+                    "missedWinGP0": 0,
+                    "mistakeGP0": 0,
+                    "inaccuracyGP0": 1,
+                    "blunderGP1": 1,
+                    "missedWinGP1": 0,
+                    "mistakeGP1": 0,
+                    "inaccuracyGP1": 2,
+                    "blunderGP2": 2,
+                    "missedWinGP2": 0,
+                    "mistakeGP2": 0,
+                    "inaccuracyGP2": 3
+                }
+            },
+            "black": {
+                "overallTallies": {
+                    "excellent": 30,
+                    "good": 10,
+                    "inaccuracy": 3,
+                    "mistake": 2,
+                    "blunder": 2,
+                    "forced": 0,
+                    "book": 4,
+                    "missedMate": 0,
+                    "fasterMate": 0,
+                    "winningToLosing": 0,
+                    "missedWin": 0,
+                    "critical": 0,
+                    "brilliant": 0,
+                    "blunderGP0": 0,
+                    "missedWinGP0": 0,
+                    "mistakeGP0": 0,
+                    "inaccuracyGP0": 1,
+                    "blunderGP1": 1,
+                    "missedWinGP1": 0,
+                    "mistakeGP1": 1,
+                    "inaccuracyGP1": 1,
+                    "blunderGP2": 1,
+                    "missedWinGP2": 0,
+                    "mistakeGP2": 1,
+                    "inaccuracyGP2": 1
+                }
+            },
+            "__createdAt": "2019-07-19T22:23:52.601Z",
+            "__updatedAt": "2019-07-19T22:23:52.601Z"
+        },
+        "3874568457": {
+            "gameId": "3874568457",
+            "arc": "throwAway",
+            "openingName": "Queen's Pawn Opening: 1...d5 2.e3",
+            "playedDatetime": "2019-07-18T19:14:40.000Z",
+            "totalPositions": 131,
+            "white": {
+                "overallTallies": {
+                    "excellent": 31,
+                    "good": 12,
+                    "inaccuracy": 7,
+                    "mistake": 2,
+                    "blunder": 8,
+                    "forced": 5,
+                    "book": 2,
+                    "missedMate": 0,
+                    "fasterMate": 0,
+                    "winningToLosing": 1,
+                    "missedWin": 0,
+                    "critical": 1,
+                    "brilliant": 0,
+                    "blunderGP0": 0,
+                    "missedWinGP0": 0,
+                    "mistakeGP0": 0,
+                    "inaccuracyGP0": 2,
+                    "blunderGP1": 2,
+                    "missedWinGP1": 0,
+                    "mistakeGP1": 2,
+                    "inaccuracyGP1": 4,
+                    "blunderGP2": 6,
+                    "missedWinGP2": 0,
+                    "mistakeGP2": 0,
+                    "inaccuracyGP2": 1
+                }
+            },
+            "black": {
+                "overallTallies": {
+                    "excellent": 50,
+                    "good": 9,
+                    "inaccuracy": 2,
+                    "mistake": 1,
+                    "blunder": 3,
+                    "forced": 0,
+                    "book": 1,
+                    "missedMate": 1,
+                    "fasterMate": 5,
+                    "winningToLosing": 0,
+                    "missedWin": 0,
+                    "critical": 3,
+                    "brilliant": 0,
+                    "blunderGP0": 0,
+                    "missedWinGP0": 0,
+                    "mistakeGP0": 0,
+                    "inaccuracyGP0": 0,
+                    "blunderGP1": 3,
+                    "missedWinGP1": 0,
+                    "mistakeGP1": 1,
+                    "inaccuracyGP1": 2,
+                    "blunderGP2": 0,
+                    "missedWinGP2": 0,
+                    "mistakeGP2": 0,
+                    "inaccuracyGP2": 0
+                }
+            },
+            "__createdAt": "2019-07-19T22:24:01.081Z",
+            "__updatedAt": "2019-07-19T22:24:01.081Z"
         }
     }
 }
