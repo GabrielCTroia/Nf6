@@ -1,10 +1,17 @@
 import { JsonDB } from "node-json-db";
 import { Config } from 'node-json-db/dist/lib/JsonDBConfig';
+import { createException } from './util';
 
 type __Record = {
   __updatedAt: Date;
   __createdAt: Date;
 }
+
+export enum ModelExceptions {
+  AttemptingToUpdateUnexistentRecord,
+  AttemptingToCreateExistentRecord,
+}
+
 
 const read = <R>(db: JsonDB, path: string): R | null => {
   try {
@@ -14,32 +21,58 @@ const read = <R>(db: JsonDB, path: string): R | null => {
   }
 }
 
-const createOrUpdate = <R>(db: JsonDB, path: string, record: R) => {
+type CreateUpdate = <R>(db: JsonDB, path: string, record: R) => void;
+
+// Replaces old record
+const create: CreateUpdate = (db, path, record) => {
+  db.push(path, {
+    ...record,
+    __createdAt: new Date(),
+    __updatedAt: new Date(),
+  });
+}
+
+const update: CreateUpdate = (db, path, existentRecord) => {
+  const prev = read<__Record>(db, path);
+
+  if (!prev) {
+    throw ModelExceptions.AttemptingToUpdateUnexistentRecord;
+  }
+
+  const { __updatedAt: __prevUpdatedAt, __createdAt, ...prevWithoutMeta } = prev;
+
+  // TODO: Check if the stringify actually respects order, or do I need to do 
+  //  a deep lookup or use a different diffing method
+  const prevHash = JSON.stringify(prevWithoutMeta);
+  const nextHash = JSON.stringify(existentRecord);
+
+  db.push(path, {
+    ...existentRecord,
+    __createdAt,
+
+    // Reset the updatedAt only if the hashes are different
+    __updatedAt: (prevHash === nextHash) ? __prevUpdatedAt : new Date(),
+  });
+}
+
+const createOrUpdate: CreateUpdate = (db, path, record) => {
+  const prev = read<__Record>(db, path);
+
+  if (prev) {
+    update(db, path, record);
+  } else {
+    create(db, path, record);
+  }
+}
+
+const createOrFailOnUpdate = <R>(db: JsonDB, path: string, record: R) => {
   const prev = read<R & __Record>(db, path);
 
   if (prev) {
-
-    const { __updatedAt: __prevUpdatedAt, __createdAt, ...prevWithoutMeta } = prev;
-
-    // TODO: Check if the stringify actually respects order, or do I need to do 
-    //  a deep lookup or use a different diffing method
-    const prevHash = JSON.stringify(prevWithoutMeta);
-    const nextHash = JSON.stringify(record);
-
-    db.push(path, {
-      ...record,
-      __createdAt,
-
-      // Reset the updatedAt only if the hashes are different
-      __updatedAt: (prevHash === nextHash) ? __prevUpdatedAt : new Date(),
-    });
-  } else {
-    db.push(path, {
-      ...record,
-      __createdAt: new Date(),
-      __updatedAt: new Date(),
-    });
+    throw ModelExceptions.AttemptingToCreateExistentRecord;
   }
+
+  create(db, path, record);
 }
 
 export class Model<R> {
@@ -63,6 +96,10 @@ export class Model<R> {
 
   createOrUpdate(record: R, key: string = this.keyExtractor(record)) {
     return createOrUpdate(this.db, `${this.path}/${key}`, record);
+  }
+
+  createOrFailOnUpdate(record: R, key: string = this.keyExtractor(record)) {
+    return createOrFailOnUpdate(this.db, `${this.path}/${key}`, record);
   }
 
   all() {
@@ -102,41 +139,3 @@ export class Model<R> {
   }
 
 }
-
-// export const getModel = <R>({ name, path = `/${name}`, keyExtractor }: {
-//   name: string;
-//   keyExtractor: (r: R) => string;
-//   path?: string;
-// }) => {
-//   const db = new JsonDB(new Config(`./db/${name}`, true, true, '/'));
-
-//   return {
-//     read: (key: string) => read<R>(db, `${path}/${key}`),
-//     createOrUpdate: (record: R, key: string = keyExtractor(record)) => createOrUpdate(db, `${path}/${key}`, record),
-//     all: () => db.filter<R>(`${path}`, () => true) || [],
-//     filter: (cb: (r: R) => boolean) => db.filter<R>(`${path}`, cb) || [],
-//     map: <T>(cb: (r: R) => T) => {
-//       const res: T[] = [];
-
-//       // Hack: Make use of the provided method filer since this is the only iterator given
-//       db.filter<R>(`${path}`, (r) => {
-//         res.push(cb(r));
-
-//         // don't fill an extra array
-//         return false;
-//       });
-
-//       return res;
-//     },
-//     forEach: (cb: (r: R) => void) => {
-//       // Hack: Make use of the provided method filer since this is the only iterator given
-//       db.filter<R>(`${path}`, (r) => {
-//         cb(r);
-
-//         // don't fill an extra array
-//         return false;
-//       });
-//     },
-//     find: (cb: (r: R) => boolean) => db.find<R>(`${path}`, cb),
-//   }
-// }
