@@ -1,10 +1,11 @@
 import fs from 'fs';
+import request from 'request';
 import puppeteer, { Page } from 'puppeteer';
 import LineByLineReader from 'line-by-line';
 import { Path, pathOr } from 'ramda';
 import { isArray } from 'util';
-import { Readable, ReadableOptions, Writable } from 'stream';
-import { Model } from './Model';
+import { Readable, Writable } from 'stream';
+import { Model, ModelExceptions } from './Model';
 
 export const saveToFile = (path: string, content: string) => {
   return new Promise((resolve, reject) => {
@@ -99,6 +100,33 @@ export const fetchHTML = async (url: string, opts: {
   return html;
 }
 
+export enum FetchDataExceptions {
+  GenericError,
+}
+
+export const fetchJSON = (url: string, { method = 'GET' } = {}) => {
+  return new Promise((resolve, reject) => {
+    request({
+      url,
+      method,
+      followAllRedirects: true,
+    }, async (error, res) => {
+      if (error) {
+        // console.log('error', error);
+        // Need to refactor this once I come with an error handling strategy
+        reject({
+          type: FetchDataExceptions.GenericError,
+          stack: error.stack,
+          message: error.name + ' ' + error.message,
+        });
+        return;
+      }
+
+      resolve(JSON.parse(res.body));
+    });
+  });
+}
+
 
 export const readFromLocal = async (path: string, onPageReady: (page: Page) => Promise<void>) => {
   const browser = await puppeteer.launch();
@@ -172,7 +200,7 @@ export const fetchAsStream = <T>(fetchNextData: () => Promise<T | null>) => {
 export const saveToModelAsStream = <R>(model: Model<R>) => {
   return new Writable({
     objectMode: true,
-    write: async (data: R[], _, next) => {
+    write: (data: R[], _, next) => {
       data.forEach((item) => {
         model.createOrUpdate(item);
       });
@@ -181,5 +209,7 @@ export const saveToModelAsStream = <R>(model: Model<R>) => {
 
       next();
     }
-  })
+  });
 }
+
+export const createException = <T extends Object>(type: string, payload?: T) => ({ type, payload });
