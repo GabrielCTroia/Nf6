@@ -54,8 +54,6 @@ const fetch = async (paginator: Paginator) => {
   }
 }
 
-
-
 export const scrape = (username: string) => {
   const livePaginator = getPaginator(username, GameTypes.live);
   const dailyPaginator = getPaginator(username, GameTypes.daily);
