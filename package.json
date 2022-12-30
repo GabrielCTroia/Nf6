@@ -29,7 +29,7 @@
     "@types/through2": "^2.0.34",
     "cheerio": "^1.0.0-rc.3",
     "dateformat": "^3.0.3",
-    "flat": "^4.1.0",
+    "flat": "^5.0.1",
     "jsonlines": "^0.1.1",
     "line-by-line": "^0.1.6",
     "line-reader": "^0.4.0",
